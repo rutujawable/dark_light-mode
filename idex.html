@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>DoM class modification
+
+    </title>
+    <style>
+        .theme{
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        .active{
+            border: solid black 1px;
+            background-color: yellow;
+
+        }
+       
+         .body-dark{
+
+            background-color: black;
+            color: white;
+         }
+
+         .body-light{
+
+         background-color:rgb(240, 240, 29);;
+          color: black;
+}
+        
+
+        
+    </style>
+</head>
+<body id="body">
+    <div>
+    <img src="dark.png" class="theme " id="dark-mode" onclick=darkmode()>
+    <img src="light.png" class="theme" id="light-mode"  onclick=lightmode()>
+
+    <h1>This is light dark mode theme changer</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Dolores mollitia similique tempora saepe aperiam? Quis at corporis pariatur officiis nesciunt nihil exercitationem corrupti, totam adipisci dolore eum tenetur voluptatibus numquam!</p>
+      
+
+</div>
+<script>
+    function darkmode(){
+        const darkMode= document.getElementById("dark-mode")
+        darkMode.classList.add('active')
+
+        const lightMode= document.getElementById("light-mode")
+        lightMode.classList.remove('active')
+
+        const body= document.getElementById("body")
+        body.className = "body-dark"
+
+
+    }
+
+    function lightmode(){
+
+        const lightMode= document.getElementById("light-mode")
+        lightMode.classList.add('active')
+
+        const darkMode= document.getElementById("dark-mode")
+        darkMode.classList.remove('active')
+
+        const body= document.getElementById("body")
+        body.className = "body-light"
+
+        
+    }
+</script>
+    
+</body>
+</html>
